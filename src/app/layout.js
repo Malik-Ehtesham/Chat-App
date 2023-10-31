@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SProvider from "@/components/sessionProvider/sessionProvider";
+import MainHeader from "@components/MainHeader/MainHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,10 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="cmyk">
       <body className={inter.className}>
         <SProvider>
-          <main> {children}</main>
+          <main>{children}</main>
         </SProvider>
       </body>
     </html>
