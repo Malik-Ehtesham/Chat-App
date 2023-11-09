@@ -3,7 +3,7 @@ import MessageBox from "@components/MessageBox/MessageBox";
 
 export default function ChatboxLayout({ children }) {
   return (
-    <main>
+    <main className="min-h-screen flex flex-col justify-between">
       <ChatboxHeader />
       {children}
       <MessageBox />

@@ -4,7 +4,9 @@ import MessageBox from "@components/MessageBox/MessageBox";
 
 const Chatbox = () => {
   return (
-    <div className=" min-h-screen flex flex-col">
+    <div className="h-96 flex flex-col items-end  overflow-y-auto">
+      <ChatCard /> <ChatCard /> <ChatCard /> <ChatCard /> <ChatCard />{" "}
+      <ChatCard />
       <ChatCard />
     </div>
   );
