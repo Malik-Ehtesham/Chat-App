@@ -8,7 +8,7 @@ const MessageBox = () => {
         label="Your Message"
         id="fullWidth"
       />
-      <SendIcon />
+      <SendIcon fontSize="large" />
     </div>
   );
 };

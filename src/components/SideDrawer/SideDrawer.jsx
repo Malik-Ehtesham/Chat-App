@@ -14,6 +14,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import SettingsIcon from "@mui/icons-material/Settings";
+import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
 import Link from "next/link";
 
 export default function TemporaryDrawer() {
@@ -50,6 +51,16 @@ export default function TemporaryDrawer() {
                 <HomeIcon color="primary" />
               </ListItemIcon>
               <ListItemText primary="Home" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
+        <Link href="/allUsers">
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <PeopleAltIcon color="primary" />
+              </ListItemIcon>
+              <ListItemText primary="Add Friends" />
             </ListItemButton>
           </ListItem>
         </Link>

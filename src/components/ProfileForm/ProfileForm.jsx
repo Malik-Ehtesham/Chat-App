@@ -1,6 +1,9 @@
 "use client";
-import { TextField } from "@mui/material";
 import { useState } from "react";
+
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 
 const ProfileForm = () => {
   // -----USE STATES----------
@@ -10,6 +13,20 @@ const ProfileForm = () => {
   const [country, setCountry] = useState("");
   const [email, setEmail] = useState("");
   const [update, setUpdate] = useState(false);
+
+  // --------VARIABLE DECALARATIONS---------
+
+  const VisuallyHiddenInput = styled("input")({
+    clip: "rect(0 0 0 0)",
+    clipPath: "inset(50%)",
+    height: 1,
+    overflow: "hidden",
+    position: "absolute",
+    bottom: 0,
+    left: 0,
+    whiteSpace: "nowrap",
+    width: 1,
+  });
 
   // ------HANDLERS------------
 
@@ -39,6 +56,16 @@ const ProfileForm = () => {
           src="/ehtesham.jpg"
           className="w-44 sm:w-56  rounded-lg  my-2 border-4 border-blue-400"
         />
+        {update ? (
+          <Button
+            component="label"
+            variant="contained"
+            startIcon={<CloudUploadIcon />}
+          >
+            Upload file
+            <VisuallyHiddenInput type="file" />
+          </Button>
+        ) : null}
         <div className="w-full  my-3">
           <label className="font-semibold">Username:</label>
           <input
